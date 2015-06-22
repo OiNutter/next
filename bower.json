@@ -1,0 +1,20 @@
+{
+  "name": "next",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/OiNutter/next",
+  "authors": [
+    "OiNutter <willmckenzie@oinutter.co.uk>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "~1.12.3"
+  }
+}
