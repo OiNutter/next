@@ -1,0 +1,30 @@
+{
+  "name": "Next",
+  "description": "Simple menubar Todo list",
+  "author": {
+    "name": "OiNutter",
+    "email": "will@oinutter.co.uk"
+  },
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+      "start":"gulp"
+  },
+  "devDependencies": {
+    "menubar": "^2.0.14",
+    "browserify": "^10.1.3",
+    "gulp": "^3.8.11",
+    "gulp-atom": "^0.1.0",
+    "gulp-install": "^0.4.0",
+    "gulp-less": "^3.0.3",
+    "react": "^0.13.2",
+    "reactify": "^1.1.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "flux": "^2.0.1",
+    "keymirror": "~0.1.0",
+    "object-assign": "^1.0.0"
+  }
+}

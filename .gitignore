@@ -1,0 +1,5 @@
+build/*
+cache/*
+compile/*
+node_modules
+*.log
