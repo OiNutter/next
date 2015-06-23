@@ -36,19 +36,20 @@ var React = require('react'),
                 clearCompletedButton =
                     <button
                         id="clear-completed"
+                        className="ui button column"
                         onClick={this._onClearCompletedClick}>
                         Clear completed ({completed})
                     </button>
             }
 
             return (
-                <footer id="footer">
-                    <span id="todo-count">
+                <footer id="footer" className="columnrow">
+                    <label id="todo-count" class="column">
                         <strong>
                             {itemsLeft}
                         </strong>
                         {itemsLeftPhrase}
-                    </span>
+                    <label>
                     {clearCompletedButton}
                 </footer>
             )

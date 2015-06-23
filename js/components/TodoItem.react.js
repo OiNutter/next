@@ -37,26 +37,31 @@ var React = require('react'),
             // This differentiation between classification and state becomes important
             // in the naming of view actions toggleComplete() vs. destroyCompleted().
             return (
-                <li
+                <div
                     className={cx({
                         'completed': todo.complete,
-                        'editing': this.state.isEditing
+                        'editing': this.state.isEditing,
+                        'item': true,
                     })}
                     key={todo.id}>
-                    <div className="view">
-                        <input
-                            className="toggle"
-                            type="checkbox"
-                            checked={todo.complete}
-                            onChange={this._onToggleComplete}
-                        />
-                        <label onDoubleClick={this._onDoubleClick}>
-                            {todo.text}
-                        </label>
-                        <button className="destroy" onClick={this._onDestroyClick} />
+                    <div className="content">
+                        <div className="ui checkbox">
+                            <input
+                                className="toggle"
+                                type="checkbox"
+                                checked={todo.complete}
+                                onChange={this._onToggleComplete}
+                            />
+                            <label onDoubleClick={this._onDoubleClick}>
+                                {todo.text}
+                            </label>
+                        </div>
+                        <button className="ui button negative circular right floated" onClick={this._onDestroyClick}>
+                            <i className="icon remove small"></i>
+                        </button>
                     </div>
                     {input}
-                </li>
+                </div>
             )
         },
 

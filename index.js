@@ -4,7 +4,7 @@ var app = require('app'),
     mainWindow,
     mb
 
-mb = menubar({
+/*mb = menubar({
     preloadWindow:true
 })
 mb.on('ready', function () {
@@ -12,9 +12,11 @@ mb.on('ready', function () {
 
     mb.on('after-create-window', function () {
         mb.window.loadUrl('file://' + __dirname + "/index.html")
+        mb.window.openDevTools()
     })
-})
-/*app.on('ready', function () {
+
+})*/
+app.on('ready', function () {
 
     mainWindow = new BrowserWindow({
         width:800,
@@ -29,4 +31,4 @@ mb.on('ready', function () {
         mainWindow  = null
     })
 
-})*/
+})

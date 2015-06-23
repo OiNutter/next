@@ -3,5 +3,5 @@ var React = require('react'),
 
 React.render(
   <TodoApp />,
-  document.getElementById('container')
+  document.body
 )

@@ -8,13 +8,16 @@ var React = require('react'),
          */
         render: function() {
             return (
-                <header id="header">
-                    <h1>todos</h1>
-                    <TodoInput
-                        id="new-todo"
-                        placeholder="What needs to be done?"
-                        onSave={this._onSave}
-                    />
+                <header id="header" className="two column centered">
+                    <h1 className="ui huge header column row center aligned">next</h1>
+                    <div class="column row center aligned">
+                        <TodoInput
+                            id="new-todo"
+                            className="ui input massive fluid"
+                            placeholder="What needs to be done?"
+                            onSave={this._onSave}
+                        />
+                    </div>
                 </header>
             )
         },

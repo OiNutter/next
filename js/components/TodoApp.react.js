@@ -34,8 +34,8 @@ TodoApp = React.createClass({
      */
     render: function() {
         return (
-            <div>
-                <Header />
+            <div className="ui centered grid two column centered grid">
+                <Header/>
                 <TodoList
                     allTodos={this.state.allTodos}
                     areAllComplete={this.state.areAllComplete}

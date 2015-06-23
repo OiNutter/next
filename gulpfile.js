@@ -11,7 +11,7 @@ function watchAndRebuild() {
 function watchAndRecompile() {
     gulp.watch('./js/**/*', ['browserify'])
     gulp.watch( ['./index.html','./index.js'], ['through'])
-    gulp.watch('./style/**/*', ['less'])
+    gulp.watch('./less/**/*', ['less'])
 }
 
 gulp.task( 'watch-all', function () {
