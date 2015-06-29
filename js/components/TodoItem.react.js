@@ -25,7 +25,7 @@ var React = require('react'),
             if (this.state.isEditing) {
                 input =
                 <TodoInput
-                    className="edit"
+                    className="edit ui input fluid"
                     onSave={this._onSave}
                     value={todo.text}
                 />
@@ -44,23 +44,24 @@ var React = require('react'),
                         'item': true,
                     })}
                     key={todo.id}>
-                    <div className="content">
-                        <div className="ui checkbox">
-                            <input
-                                className="toggle"
-                                type="checkbox"
-                                checked={todo.complete}
-                                onChange={this._onToggleComplete}
-                            />
-                            <label onDoubleClick={this._onDoubleClick}>
-                                {todo.text}
-                            </label>
+                        <div className="right floated ui icon button negative">
+                            <i className="icon remove" onClick={this._onDestroyClick}></i>
                         </div>
-                        <button className="ui button negative circular right floated" onClick={this._onDestroyClick}>
-                            <i className="icon remove small"></i>
-                        </button>
-                    </div>
-                    {input}
+                        <div className="content">
+                            <div className="ui checkbox middle aligned view">
+                                <input
+                                    className="toggle middle aligned"
+                                    type="checkbox"
+                                    checked={todo.complete}
+                                    onChange={this._onToggleComplete}
+                                />
+                                <label onDoubleClick={this._onDoubleClick}>
+                                    {todo.text}
+                                </label>
+                            </div>
+                            {input}
+                        </div>
+
                 </div>
             )
         },

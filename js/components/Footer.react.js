@@ -17,6 +17,7 @@ var React = require('react'),
                 key,
                 itemsLeft,
                 itemsLeftPhrase,
+                divider,
                 clearCompletedButton
 
             if (total === 0)
@@ -33,23 +34,29 @@ var React = require('react'),
 
             // Undefined and thus not rendered if no completed items are left.
             if (completed) {
+                divider = <div className="ui divider vertical"></div>
                 clearCompletedButton =
-                    <button
-                        id="clear-completed"
-                        className="ui button column"
-                        onClick={this._onClearCompletedClick}>
-                        Clear completed ({completed})
-                    </button>
+                    <div className="column middle aligned">
+                        <button
+                            id="clear-completed"
+                            className="ui button blue"
+                            onClick={this._onClearCompletedClick}>
+                            Clear completed ({completed})
+                        </button>
+                    </div>
             }
 
             return (
-                <footer id="footer" className="columnrow">
-                    <label id="todo-count" class="column">
-                        <strong>
-                            {itemsLeft}
-                        </strong>
-                        {itemsLeftPhrase}
-                    <label>
+                <footer id="footer" className="ui fifteen wide column center aligned stackable grid">
+                    <div className="column middle aligned">
+                        <label id="todo-count">
+                            <strong>
+                                {itemsLeft}
+                            </strong>
+                            {itemsLeftPhrase}
+                        </label>
+                    </div>
+                    {divider}
                     {clearCompletedButton}
                 </footer>
             )

@@ -1,7 +1,26 @@
-* {
-    margin:0 auto;
+@import (less) '../bower_components/semantic/dist/semantic.min.css';
+
+body {
+    padding:1rem;
 }
 
 header {
     text-align: center;
+}
+
+#footer {
+    position:relative;
+    padding:0;
+}
+
+#main {
+    margin-bottom:10px;
+}
+
+.ui.list > .item > .content {
+    line-height:37px;
+}
+
+#todo-list .item.editing .view {
+	display: none;
 }

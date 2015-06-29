@@ -12,10 +12,11 @@ mb.on('ready', function () {
 
     mb.on('after-create-window', function () {
         mb.window.loadUrl('file://' + __dirname + "/index.html")
-        mb.window.openDevTools()
+        //mb.window.openDevTools()
     })
 
 })*/
+
 app.on('ready', function () {
 
     mainWindow = new BrowserWindow({

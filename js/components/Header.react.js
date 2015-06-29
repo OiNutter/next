@@ -8,7 +8,7 @@ var React = require('react'),
          */
         render: function() {
             return (
-                <header id="header" className="two column centered">
+                <header id="header" className="fifteen wide column centered">
                     <h1 className="ui huge header column row center aligned">next</h1>
                     <div class="column row center aligned">
                         <TodoInput

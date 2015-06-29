@@ -26,17 +26,24 @@ var React = require('react'),
                 todos.push(<TodoItem key={key} todo={allTodos[key]} />)
 
             return (
-                <section id="main" className="ui card two column centered">
-                    <div className="ui checkbox">
-                        <input
-                            id="toggle-all"
-                            type="checkbox"
-                            onChange={this._onToggleCompleteAll}
-                            checked={this.props.areAllComplete ? 'checked' : ''}
-                        />
-                        <label htmlFor="toggle-all">Mark all as complete</label>
+                <section id="main" className="fifteen wide column ui grid">
+                    <div className="ui card fluid padded column row">
+                        <div id="todo-list" className="ui divided list">
+                            <div className="item">
+                                <div className="content">
+                                    <div className="ui checkbox">
+                                        <input
+                                            id="toggle-all"
+                                            type="checkbox"
+                                            onChange={this._onToggleCompleteAll}
+                                            checked={this.props.areAllComplete ? 'checked' : ''}/>
+                                        <label>Mark all as complete</label>
+                                    </div>
+                                </div>
+                            </div>
+                            {todos}
+                        </div>
                     </div>
-                    <div id="todo-list" className="ui celled list">{todos}</div>
                 </section>
             )
         },
